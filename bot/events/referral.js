@@ -1,6 +1,7 @@
 export default (bot, speech, botData) => (payload, reply) => {
     var ref = payload.referral.ref
     var message = '';
+    console.log('DEEP LINK OPENED: ', ref)
 
     switch (ref) {
         case 'sp_para_mulheres':
