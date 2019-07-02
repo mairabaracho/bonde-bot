@@ -140,8 +140,6 @@ const V2_QUICK_REPLY_K_2_1 = 'V2_QUICK_REPLY_K_2_1'
 const V2_QUICK_REPLY_K_2_2 = 'V2_QUICK_REPLY_K_2_2'
 const V2_QUICK_REPLY_K_2_3 = 'V2_QUICK_REPLY_K_2_3'
 
-const V2_QUICK_REPLY_STF_ALLOUT = 'V2_QUICK_REPLY_STF_ALLOUT'
-
 // REPLY NASCITURO RJ
 const NASCITURO_QUICK_REPLY_A = 'NASCITURO_QUICK_REPLY_A'
 const NASCITURO_QUICK_REPLY_YES = 'NASCITURO_QUICK_REPLY_YES'
@@ -209,7 +207,7 @@ export default botData => ({
     [V2_PETITION_EMAIL_WRONG1]: V2_PETITION_EMAIL_WRONG1,
     [V2_PETITION_EMAIL_OK1]: V2_PETITION_EMAIL_OK1,
 
-    [V2_QUICK_REPLY_STF_ALLOUT]: V2_QUICK_REPLY_STF_ALLOUT,
+    /*[V2_QUICK_REPLY_STF_ALLOUT]: V2_QUICK_REPLY_STF_ALLOUT,*/
     [V2_QUICK_REPLY_DISCURSO_ODIO]: V2_QUICK_REPLY_DISCURSO_ODIO,
 
     // ACTIONS NASCITURO RJ
@@ -370,57 +368,6 @@ export default botData => ({
             })
           ],
         ),
-      )
-    ],
-
-    // Chamada para assinar formulário
-    [V2_QUICK_REPLY_STF_ALLOUT]: {
-      text: botSpeeches.messages.STF_ALLOUT,
-      quick_replies: [
-        quickReply(V2_QUICK_REPLY_L_1, botSpeeches.buttonTexts.YES)
-      ],
-    },
-    [V2_QUICK_REPLY_L_1]: [
-      botSpeeches.messages.STF_ALLOUT_1,
-      messageWithQuickReply(
-        botSpeeches.messages.STF_ALLOUT_2,
-        quickReply(V2_QUICK_REPLY_L_2, botSpeeches.buttonTexts.TELL_ME_MORE),
-        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.PRESSURE_NOW)
-      )
-    ],
-    [V2_QUICK_REPLY_L_2]: [
-      botSpeeches.messages.STF_ALLOUT_3,
-      botSpeeches.messages.STF_ALLOUT_4,
-      messageWithQuickReply(
-        botSpeeches.messages.STF_ALLOUT_5,
-        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.TAKE_ACTION),
-        quickReply(V2_QUICK_REPLY_L_4, botSpeeches.buttonTexts.REALLY_NECESSARY)
-      )
-    ],
-    [V2_QUICK_REPLY_L_3]: [
-      messageWithQuickReply(
-        botSpeeches.messages.STF_ALLOUT_9,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
-        quickReply(V2_QUICK_REPLY_L_7, botSpeeches.buttonTexts.READ_PETITION)
-      )
-    ],
-    [V2_QUICK_REPLY_L_4]: [
-      botSpeeches.messages.STF_ALLOUT_6,
-      botSpeeches.messages.STF_ALLOUT_7,
-      messageWithQuickReply(
-        botSpeeches.messages.STF_ALLOUT_8,
-        quickReply(V2_QUICK_REPLY_L_3, botSpeeches.buttonTexts.TAKE_ACTION),
-        quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.NOT_NOW)
-      )
-    ],
-    [V2_QUICK_REPLY_L_5]: [
-      botSpeeches.messages.STF_ALLOUT_13
-    ],
-    [V2_QUICK_REPLY_L_7]: [
-      messageWithQuickReply(
-        botSpeeches.messages.STF_ALLOUT_10,
-        quickReply(V2_QUICK_REPLY_PETITION_NAME, botSpeeches.buttonTexts.SIGN),
-        quickReply(V2_QUICK_REPLY_L_5, botSpeeches.buttonTexts.NOT_NOW)
       )
     ],
 
@@ -919,17 +866,6 @@ export default botData => ({
             })
           ]
         ),
-        elements(
-          botSpeeches.carouselTexts.TITLE_STF,
-          botSpeeches.carouselTexts.SUBTITLE,
-          botSpeeches.carouselTexts.IMAGE_STF,
-          [
-            buttonTemplate.postback({
-              title: botSpeeches.carouselTexts.BUTTON_STF,
-              payload: V2_QUICK_REPLY_STF_ALLOUT
-            })
-          ],
-        )
         /* elements(
           botSpeeches.carouselTexts.VOTE,
           botSpeeches.carouselTexts.SUBTITLE,
